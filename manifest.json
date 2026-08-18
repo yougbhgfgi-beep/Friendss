@@ -1,0 +1,21 @@
+{
+    "name": "Happy Birthday Ayat 🎂",
+    "short_name": "Happy Birthday Ayat",
+    "description": "هدية عيد ميلاد أيات",
+    "start_url": "./",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#0f172a",
+    "icons": [
+        {
+            "src": "/favicon.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "/favicon.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}
