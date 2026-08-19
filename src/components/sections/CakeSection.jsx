@@ -11,7 +11,7 @@ export default function CakeSection() {
         }
     }, [blown]);
 
-    const candles = Array.from({ length: 18 }, (_, i) => i);
+    const candles = Array.from({ length: 8 }, (_, i) => i);
 
     const handleBlow = () => {
         if (!blown) setBlown(true);
@@ -122,7 +122,7 @@ export default function CakeSection() {
 
                         {/* Candles */}
                         {candles.map((_, i) => {
-                            const startX = 100 + (i * 200 / 17);
+                            const startX = 140 + (i * 120 / 7);
                             const candleColors = ["#f472b6", "#60a5fa", "#a78bfa", "#34d399", "#fbbf24", "#fb923c"];
                             const color = candleColors[i % candleColors.length];
                             const stripe = i % 2 === 0;
@@ -171,11 +171,11 @@ export default function CakeSection() {
                         onClick={handleBlow}
                         className="mt-6 bg-gradient-to-r from-rose-600 to-pink-500 text-white font-bold py-3 px-8 rounded-full text-sm shadow-[0_0_30px_rgba(225,29,72,0.5)] hover:shadow-[0_0_50px_rgba(225,29,72,0.7)] hover:scale-105 transition-all duration-300 active:scale-95 border border-rose-400/30"
                     >
-                        🕯️ نفسي الشم 🕯️
+                        🕯️ اطفي شمع 🕯️
                     </button>
                 ) : showWish ? (
                     <div className="mt-6 animate-fade-in">
-                        <p className="text-lg font-bold text-rose-300 drop-shadow-lg mb-2">🎆 من摇ين المين!</p>
+                        <p className="text-lg font-bold text-rose-300 drop-shadow-lg mb-2">❤️</p>
                         <p className="text-sm text-slate-300 leading-relaxed max-w-xs mx-auto">
                             كل سنة وأنتِ طيبة يا أيات 🎂❤️<br/>
                             ربنا يخليكي ويحقق كل أمنياتك 🥺✨
