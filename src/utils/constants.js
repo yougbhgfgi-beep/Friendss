@@ -4,7 +4,9 @@ export const GIVER_NAME = "زينب";
 export const RECEIVER_NAME = "أيات";
 export const SITE_TITLE = "Happy Birthday Ayat 🎂";
 
-export const PASSWORD = "LOVE";
+export const PASSWORD_DAY = "15";
+export const PASSWORD_MONTH = "7";
+export const PASSWORD_YEAR = "2022";
 
 export const PLAYLIST = [
     "./music.mp3"
@@ -122,3 +124,4 @@ export const FINAL_SCENE_STEPS = [
 export const LOGIN_ERROR = "كلمة السر خطأ، حاول مرة أخرى ❤️";
 export const LOGIN_BUTTON = "ادخلي يا أيات 🎂";
 export const LOGIN_TITLE = "هدية عيد ميلاد";
+export const LOGIN_HINT = "أدخلي تاريخ ميلادك 💕";

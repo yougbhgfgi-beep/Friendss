@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { LOVE_START_DATE, PLAYLIST, LOVE_MESSAGES, RECEIVER_NAME, PASSWORD, LOGIN_ERROR, LOGIN_BUTTON, LOGIN_TITLE } from "./utils/constants";
+import { LOVE_START_DATE, PLAYLIST, LOVE_MESSAGES, RECEIVER_NAME, PASSWORD_DAY, PASSWORD_MONTH, PASSWORD_YEAR, LOGIN_ERROR, LOGIN_BUTTON, LOGIN_TITLE, LOGIN_HINT } from "./utils/constants";
 import { playBeep } from "./utils/audio";
 import Heart from "./components/icons/Heart";
 import BackgroundHearts from "./components/background/BackgroundHearts";
@@ -22,7 +22,9 @@ import SecretPopup from "./components/modals/SecretPopup";
 export default function LoveWebsite() {
     const [isLoading, setIsLoading] = useState(true);
     const [isLogged, setIsLogged] = useState(false);
-    const [password, setPassword] = useState("");
+    const [passDay, setPassDay] = useState("");
+    const [passMonth, setPassMonth] = useState("");
+    const [passYear, setPassYear] = useState("");
     const [showLetter, setShowLetter] = useState(false);
     const [showSecret, setShowSecret] = useState(false);
     const [showFinalScene, setShowFinalScene] = useState(false);
@@ -99,7 +101,7 @@ export default function LoveWebsite() {
     }, []);
 
     const handleLogin = () => {
-        if (password.toUpperCase() === PASSWORD) {
+        if (passDay === PASSWORD_DAY && passMonth === PASSWORD_MONTH && passYear === PASSWORD_YEAR) {
             setIsLogged(true);
             setTimeout(() => {
                 if (audioRef.current) {
@@ -176,18 +178,40 @@ export default function LoveWebsite() {
                     </div>
                     
                     <h1 className="text-xl font-extrabold mb-2 font-sans tracking-tight text-white drop-shadow-2xl">{LOGIN_TITLE}</h1>
-                    <p className="text-slate-300 mb-6 font-medium text-xs">هدية من زينب لأيات 🎁</p>
+                    <p className="text-slate-300 mb-4 font-medium text-xs">{LOGIN_HINT}</p>
                     
-                    <div className="relative mb-5">
-                        <input
-                            type="password"
-                            placeholder="كلمة السر الخاصة بينا"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            className="fancy-input w-full p-3 pl-10 rounded-2xl text-white placeholder-slate-400 text-center text-sm outline-none shadow-inner"
-                        />
-                        <div className="absolute left-4 top-1/2 -translate-y-1/2 opacity-40">
-                            <Heart size={16} />
+                    <div className="flex gap-2 mb-5">
+                        <div className="relative flex-1">
+                            <input
+                                type="password"
+                                placeholder="يوم"
+                                maxLength={2}
+                                value={passDay}
+                                onChange={(e) => setPassDay(e.target.value)}
+                                className="fancy-input w-full p-3 rounded-2xl text-white placeholder-slate-400 text-center text-sm outline-none shadow-inner"
+                            />
+                        </div>
+                        <div className="flex items-center text-slate-500 text-lg font-bold">/</div>
+                        <div className="relative flex-1">
+                            <input
+                                type="password"
+                                placeholder="شهر"
+                                maxLength={2}
+                                value={passMonth}
+                                onChange={(e) => setPassMonth(e.target.value)}
+                                className="fancy-input w-full p-3 rounded-2xl text-white placeholder-slate-400 text-center text-sm outline-none shadow-inner"
+                            />
+                        </div>
+                        <div className="flex items-center text-slate-500 text-lg font-bold">/</div>
+                        <div className="relative flex-1">
+                            <input
+                                type="password"
+                                placeholder="سنة"
+                                maxLength={4}
+                                value={passYear}
+                                onChange={(e) => setPassYear(e.target.value)}
+                                className="fancy-input w-full p-3 rounded-2xl text-white placeholder-slate-400 text-center text-sm outline-none shadow-inner"
+                            />
                         </div>
                     </div>
                     
