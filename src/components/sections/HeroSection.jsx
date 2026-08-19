@@ -5,7 +5,7 @@ export default function HeroSection({ onSecretClick }) {
         <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 py-8 relative z-10">
             <div className="animate-float mb-4">
                 <img 
-                    src="/logo.jpg" 
+                    src="./logo.jpg" 
                     alt="Logo" 
                     className="w-28 h-28 rounded-full object-cover shadow-[0_0_40px_rgba(225,29,72,0.5)] border-4 border-rose-500/30"
                 />

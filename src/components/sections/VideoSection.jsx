@@ -13,7 +13,7 @@ export default function VideoSection({ onVideoPlay, onVideoPause }) {
                             onPause={onVideoPause}
                             onEnded={onVideoPause}
                         >
-                            <source src="/birthday-video.mp4" type="video/mp4" />
+                            <source src="./birthday-video.mp4" type="video/mp4" />
                             المتصفح مش بيدعم الفيديو
                         </video>
                     </div>

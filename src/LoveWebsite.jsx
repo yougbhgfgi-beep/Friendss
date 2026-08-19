@@ -9,6 +9,7 @@ import VideoSection from "./components/sections/VideoSection";
 import WhySpecialSection from "./components/sections/WhySpecialSection";
 import PoemSection from "./components/sections/PoemSection";
 import PromiseSection from "./components/sections/PromiseSection";
+import CakeSection from "./components/sections/CakeSection";
 import FriendshipMeter from "./components/ui/FriendshipMeter";
 import TimeBox from "./components/ui/TimeBox";
 import MemoryGame from "./components/ui/MemoryGame";
@@ -291,11 +292,13 @@ export default function LoveWebsite() {
             <WhySpecialSection />
             <PoemSection />
             <PromiseSection />
+            <CakeSection />
             <MemoryGame />
             <FriendshipMeter />
 
             <section className="py-10 text-center px-4 relative z-10">
-                <h2 className="text-lg font-bold mb-6 text-rose-300 drop-shadow-md">من يوم ما اتولدتِ وأنتِ نور عيني 🎂✨</h2>
+                <h2 className="text-lg font-bold mb-2 text-rose-300 drop-shadow-md">من يوم ما اتولدتِ وأنتِ نور عيني 🎂✨</h2>
+                <p className="text-xs text-slate-400 mb-6 font-medium">📅 تاريخ ميلادك: <span className="text-rose-400 font-bold">29 / 8 / 2007</span></p>
                 <div className="flex flex-wrap justify-center gap-3 max-w-lg mx-auto">
                     <TimeBox label="سنين" value={timeTogether.years} />
                     <TimeBox label="شهور" value={timeTogether.months} />
@@ -304,6 +307,7 @@ export default function LoveWebsite() {
                     <TimeBox label="دقائق" value={timeTogether.minutes} />
                     <TimeBox label="ثواني" value={timeTogether.seconds} />
                 </div>
+                <p className="text-[10px] text-slate-500 mt-4">من 29/8/2007 لحد النهاردة 🤍</p>
             </section>
 
             <footer className="py-10 text-center border-t border-slate-800/50 relative z-10">
