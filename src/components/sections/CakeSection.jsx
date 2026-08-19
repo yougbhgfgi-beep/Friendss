@@ -11,7 +11,7 @@ export default function CakeSection() {
         }
     }, [blown]);
 
-    const candles = Array.from({ length: 8 }, (_, i) => i);
+    const candles = Array.from({ length: 6 }, (_, i) => i);
 
     const handleBlow = () => {
         if (!blown) setBlown(true);
@@ -122,7 +122,7 @@ export default function CakeSection() {
 
                         {/* Candles */}
                         {candles.map((_, i) => {
-                            const startX = 140 + (i * 120 / 7);
+                            const startX = 155 + (i * 90 / 5);
                             const candleColors = ["#f472b6", "#60a5fa", "#a78bfa", "#34d399", "#fbbf24", "#fb923c"];
                             const color = candleColors[i % candleColors.length];
                             const stripe = i % 2 === 0;
